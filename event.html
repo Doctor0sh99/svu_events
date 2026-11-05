@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الفعالية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="img/شعار_الجامعة_الافتراضية_السورية.png" alt="logo">
+        <h1>تفاصيل الفعالية</h1>
+        <nav class="main-bar">
+             <ul>
+        
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            
+            <div class="col-12 col-lg-8">
+                <div class="mb-4">
+                    <span id="event-category" class="badge bg-primary mb-2">التصنيف</span>
+                    <h1 id="event-title" class="fw-bold">جاري تحميل عنوان الفعالية...</h1>
+                </div>
+                
+                <img id="event-main-img" src="" alt="صورة الفعالية الرئيسية" class="img-fluid rounded shadow-sm w-100 mb-4" style="max-height: 550px; object-fit: cover;">
+                
+                <h3 class="mb-3 text-primary">عن الفعالية</h3>
+                
+                <div id="event-desc" class="p-4 rounded shadow-sm mb-5" line-height: 1.8;">
+                    جاري تحميل تفاصيل الفعالية...
+                </div>
+
+                <div class="mt-4">
+                    <h4 class="text-primary mb-3 border-bottom pb-2">معرض الصور</h4>
+                    <div class="row g-3" id="event-gallery"></div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="rounded shadow-sm p-4 mb-4" border: 1px solid var(--border-color, #eee);">
+                    <h4 class="mb-4 text-center border-bottom pb-2">معلومات الحضور</h4>
+                    
+                    <ul class="list-unstyled mb-4 lh-lg fw-bold">
+                        <li id="event-date" class="mb-2">📅 التاريخ: </li>
+                        <li id="event-time" class="mb-2">⏰ الوقت: </li>
+                        <li id="event-location" class="mb-2">📍 المكان: </li>
+                    </ul>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" type="button" onclick="alert('تمت الإضافة إلى تقويمك بنجاح!')">📅 أضف للتقويم</button>
+                        <button class="btn btn-outline-secondary" type="button" onclick="alert('تم نسخ رابط المشاركة!')">🔗 شارك الفعالية</button>
+                        <button class="btn btn-success fw-bold mt-2" type="button" onclick="document.getElementById('bookingModal').classList.add('show')">🎟️ احجز مقعدك الآن</button>
+                    </div>
+                </div>
+
+                <div class="rounded shadow-sm p-3 text-center">
+                    <h5 class="mb-3">موقع الفعالية</h5>
+                    <img id="event-map-img" src="" alt="خريطة الموقع" class="img-fluid rounded border">
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="my-5">
+        <h3 class="text-center mb-4 text-primary">فعاليات ذات صلة</h3>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img/event/ev1-1.jpg" class="card-img-top" alt="فعالية مشابهة" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold mb-3">ورشة عمل تطبيقية حول بناء تطبيقات الويب</h5>
+                        <a href="events.html" class="btn btn-outline-primary mt-auto">تصفح الفعاليات</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img/event/ev4.jpg" class="card-img-top" alt="فعالية مشابهة" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold mb-3">دورة مهارات المقابلات الشخصية</h5>
+                        <a href="events.html" class="btn btn-outline-primary mt-auto">تصفح الفعاليات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary">تأكيد حجز المقعد</h5>
+                    <button type="button" class="btn-close" onclick="document.getElementById('bookingModal').classList.remove('show')"></button>
+                </div>
+                <div class="modal-body">
+                    هل أنت متأكد من رغبتك في حجز مقعد في هذه الفعالية؟ سيتم إرسال تذكرة الدخول إلى بريدك الإلكتروني الجامعي.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('bookingModal').classList.remove('show')">إلغاء</button>
+                    <button type="button" class="btn btn-success" onclick="document.getElementById('bookingModal').classList.remove('show'); alert('تم تأكيد حجزك بنجاح! راجع بريدك الجامعي.')">تأكيد الحجز</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 pb-0 justify-content-end">
+                    <button type="button" class="btn-close btn-close-white bg-white p-2 rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center position-relative p-0">
+                    <img id="lightboxImg" src="" class="img-fluid rounded shadow-lg" style="max-height: 85vh; object-fit: contain;">
+                    <button class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-3 rounded-circle" style="width: 45px; height: 45px;" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-3 rounded-circle" style="width: 45px; height: 45px;" onclick="changeImage(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 دليل فعاليات الجامعة الافتراضية السورية SVU - جميع الحقوق محفوظة.</p>
+            <p>تواصل معنا: info@svuonline.org | تابعنا على: 
+                <a href="#">فيسبوك</a> - <a href="#">X</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

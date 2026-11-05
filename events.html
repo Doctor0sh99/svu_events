@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفعاليات</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer ></script>
+
+</head>
+<body>
+
+    <header class="bg-body-tertiary shadow-sm py-3 mb-4>
+            <img src="img/شعار_الجامعة_الافتراضية_السورية.png" alt="logo" height="60" class="mb-3 mb-md-0">
+             <h1>الفعاليات</h1>
+             <nav class="navigation">
+          <ul>
+        
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+        </nav>
+    </header>
+
+    <section class="container mb-5">
+        <div class="row g-3 bg-tertiary p-4 rounded shadow-sm">
+            <div class="col-md-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="ابحث عن فعالية (الاسم)...">
+            </div>
+            <div class="col-md-3">
+                <select id="categoryFilter" class="form-select">
+                    <option value="all">كل التصنيفات</option>
+                    <option value="tech">التقنية والبرمجة</option>
+                    <option value="job">التطوير المهني وسوق العمل</option>
+                    <option value="academia">الندوات الأكاديمية</option>
+                    <option value="student">النشاطات الطلابية والترفيه</option>
+                    <option value="sports">الرياضة والصحة</option>
+                    <option value="art">الثقافة والفنون</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select id="locationFilter" class="form-select">
+                    <option value="all">كل المواقع</option>
+                    <option value="Damascus">دمشق</option>
+                    <option value="Tartous">طرطوس</option>
+                    <option value="Latakia">اللاذقية</option>
+                    <option value="Idlib">ادلب</option>
+                    <option value="Dar'a">درعا</option>
+                    <option value="Aleppo">حلب</option>
+                    <option value="Hama">حماة</option>
+                    <option value="Homs">حمص</option>
+                    <option value="Der Alzor">دير الزور</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input type="date" id="dateFilter" class="form-control">
+            </div>
+        </div>
+    </section>
+
+    <main class="container mb-5">
+    <div class="row g-4" id="eventsGrid">
+        
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-1" data-category="tech" data-location="Damascus" data-title="مسابقة الذكاء الاصطناعي لطلاب تقانة المعلومات" data-date="2026-11-15" data-time="10:00 صباحاً - 4:00 مساءً" data-main-img="img/event/ev1-1.jpg" data-map-img="img/map/damascus-map.png"
+        data-gallery="img/event/1eg1.jpg,img/event/1eg2.jpg,img/event/1eg3.jpg"
+        data-full-desc="<p>تدعوكم الجامعة الافتراضية السورية (SVU) للمشاركة في <strong>هاكاثون الذكاء الاصطناعي</strong> الأضخم لطلاب تقانة المعلومات والهندسة المعلوماتية.</p><p>يهدف هذا الحدث التفاعلي إلى تشجيع الطلاب المبدعين على بناء حلول برمجية مبتكرة، وتطوير خوارزميات الذكاء الاصطناعي ودمجها مع تقنيات الويب الحديثة في بيئة تنافسية حقيقية.</p><p><strong>ماذا يتضمن الحدث؟</strong></p><ul><li>العمل ضمن فرق برمجية لتطوير مشاريع عملية.</li><li>إشراف وتوجيه مباشر من نخبة من أساتذة الجامعة وخبراء التقنية.</li><li>ورش عمل مكثفة وجلسات عصف ذهني لحل المشكلات المعقدة.</li></ul><p>في ختام الفعالية، سيتم عرض المشاريع على لجنة تحكيم متخصصة، وسيحصل الفائزون على جوائز قيمة وشهادات تقدير معتمدة تدعم فرصهم في سوق العمل وتغني سيرتهم الذاتية.</p>"> 
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev1.jpg" class="card-img-top" alt="صورة الفعالية">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-primary mb-2 align-self-start">تقنية و برمجة</span>
+                    <h3 class="card-title h5">مسابقة الذكاء الاصطناعي لطلاب تقانة المعلومات</h3>
+                    <p class="text-muted small mb-2">📅 2026-11-15 | 📍 دمشق</p>
+                    <p class="card-text flex-grow-1">مسابقة تهدف إلى تشجيع الطلاب على تطوير مهاراتهم في مجال الذكاء الاصطناعي وتقنيات الويب.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-2" data-category="tech" data-location="Damascus" data-title="ورشة عمل حول تطوير المواقع الإلكترونية" data-date="2026-11-20" data-time="9:00 صباحاً - 1:00 ظهراً" data-main-img="img/event/ev2-1.jpg" data-map-img="img/map/damascus-map.png"
+        data-gallery="img/event/2eg1.jpg,img/event/2eg2.jpg,img/event/2eg3.jpg"
+        data-full-desc="<p>تدعوكم الجامعة الافتراضية السورية (SVU) للانضمام إلى <strong>ورشة عمل مكثفة حول تطوير المواقع الإلكترونية الحديثة</strong>.</p><p>تهدف هذه الورشة التطبيقية إلى تزويد الطلاب بالمهارات العملية اللازمة لبناء واجهات مستخدم تفاعلية وجذابة باستخدام أحدث تقنيات الويب، وربط الجانب الأكاديمي بمتطلبات سوق العمل.</p><p><strong>محاور الورشة:</strong></p><ul><li>مراجعة شاملة لأساسيات HTML5 و CSS3 و JavaScript.</li><li>التطبيق العملي لبناء مواقع متجاوبة (Responsive Design) باستخدام إطار عمل Bootstrap.</li><li>أفضل الممارسات لتحسين تجربة المستخدم (UX) وتصميم واجهات المستخدم (UI).</li></ul><p>في نهاية الورشة، سيتمكن المشاركون من بناء موقع إلكتروني متكامل بأنفسهم، وسيحصلون على شهادة حضور تدعم ملفهم المهني.</p>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev2.jpg" class="card-img-top" alt="صورة الفعالية">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-primary mb-2 align-self-start">تقنية و برمجة</span>
+                    <h3 class="card-title h5">ورشة عمل حول تطوير المواقع الإلكترونية</h3>
+                    <p class="text-muted small mb-2">📅 2026-11-20 | 📍 دمشق</p>
+                    <p class="card-text flex-grow-1">ورشة عمل تركز على تطوير مهارات التصميم والتطوير لتصميم المواقع الإلكترونية الحديثة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="3" data-category="job" data-location="Aleppo" data-title="معرض التوظيف السنوي لخريجي الجامعة" data-date="2026-11-18" data-time="12:00 ظهراََ- 4:00 عصراََ" data-main-img="img/event/ev3-1.jpg" data-map-img="img/map/aleppo-map.png"
+        data-gallery="img/event/3eg1.jpg,img/event/3eg2.jpg,img/event/3eg3.jpg"
+        data-full-desc="<p>معرض التوظيف السنوي لخريجي الجامعة يعرض فرص التوظيف المتاحة للخريجين من الجامعة. يتيح هذا المعرض للخريجين فرصة التعرف على الشركات والمؤسسات التي تبحث عن موظفين جدد. سيكون هناك جلسات تعريفية للشركات المشاركة، بالإضافة إلى ورش عمل حول كيفية تحسين مهارات البحث عن عمل وإعداد السيرة الذاتية. في نهاية المعرض، سيتمكن الخريجون من تقديم طلبات التوظيف مباشرة للشركات المشاركة.</p>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev3.jpg" class="card-img-top" alt="صورة الفعالية">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-info mb-2 align-self-start text-dark">تطوير مهني</span>
+                    <h3 class="card-title h5">معرض التوظيف السنوي لخريجي الجامعة</h3>
+                    <p class="text-muted small mb-2">📅 2026-11-18 | 📍 حلب</p>
+                    <p class="card-text flex-grow-1">معرض يعرض فرص التوظيف المتاحة للخريجين من الجامعة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-4" data-category="job" data-location="Latakia" data-title="دورة مهارات المقابلات الشخصية وكتابة السيرة الذاتية" data-date="2026-12-01" data-time="11:00 صباحاً - 3:00 مساءً" data-main-img="img/event/ev4-1.jpg" data-map-img="img/map/latakia-map.png"
+        data-gallery="img/event/4eg1.jpg,img/event/4eg2.jpg,img/event/4eg3.jpg"
+        data-full-desc="<p>استعد لسوق العمل مع <strong>دورة التطوير المهني</strong> الشاملة.</p><p>تعلم كيف تبرز مهاراتك بشكل احترافي أمام أصحاب العمل.</p><p><strong>المحاور:</strong></p><ul><li>صياغة السيرة الذاتية (CV) باحترافية.</li><li>محاكاة عملية لمقابلات العمل (Mock Interviews).</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev4.jpg" class="card-img-top" alt="دورة مهنية">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-info mb-2 align-self-start text-dark">التطوير المهني</span>
+                    <h3 class="card-title h5">دورة مهارات المقابلات وكتابة السيرة</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-01 | 📍 اللاذقية</p>
+                    <p class="card-text flex-grow-1">دورة تأهيلية لإعداد الخريجين لدخول سوق العمل بنجاح.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-5" data-category="student" data-location="Tartous" data-title="رحلة تعارف وتخييم لطلاب الجامعة الافتراضية" data-date="2026-12-05" data-time="8:00 صباحاً - 8:00 مساءً" data-main-img="img/event/ev5-1.jpg" data-map-img="img/map/tartous-map.png"
+        data-gallery="img/event/5eg1.jpg,img/event/5eg2.jpg,img/event/5eg3.jpg"
+        data-full-desc="<p>انضم إلينا في <strong>رحلة التخييم السنوية</strong> لطلاب الجامعة في أحضان طبيعة طرطوس الخلابة.</p><p>فرصة رائعة للتعارف بين زملاء الدراسة في بيئة ترفيهية بعيدة عن ضغوط الامتحانات.</p><p><strong>النشاطات:</strong></p><ul><li>مسابقات ترفيهية وفرق عمل.</li><li>حفل شواء وتخييم مسائي.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev5.jpg" class="card-img-top" alt="رحلة طرطوس">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-warning mb-2 align-self-start text-dark">نشاطات طلابية</span>
+                    <h3 class="card-title h5">رحلة تعارف وتخييم طلابية</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-05 | 📍 طرطوس</p>
+                    <p class="card-text flex-grow-1">رحلة ترفيهية لتعزيز التواصل الاجتماعي بين طلاب الجامعة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-6" data-category="sports" data-location="Damascus" data-title="مسابقة الشطرنج المركزية للطلاب" data-date="2026-12-10" data-time="9:00 صباحاً - 5:00 مساءً" data-main-img="img/event/ev6-1.jpg" data-map-img="img/map/damascus-map.png"
+        data-gallery="img/event/6eg1.jpg,img/event/6eg2.jpg,img/event/6eg3.jpg"
+        data-full-desc="<p>انطلاق <strong>البطولة المركزية للشطرنج</strong> لطلاب كافة الفروع في دمشق.</p><p>أثبت مهاراتك الاستراتيجية ونافس على لقب بطل الجامعة.</p><p><strong>التفاصيل:</strong></p><ul><li>نظام اللعب السويسري.</li><li>جوائز مالية للفائزين بالمراكز الثلاثة الأولى.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev6.jpg" class="card-img-top" alt="شطرنج">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-success mb-2 align-self-start">الرياضة والصحة</span>
+                    <h3 class="card-title h5">مسابقة الشطرنج المركزية للطلاب</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-10 | 📍 دمشق</p>
+                    <p class="card-text flex-grow-1">بطولة ذهنية وتنافسية على مستوى كافة برامج الجامعة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-7" data-category="academia" data-location="Damascus" data-title="ندوة تعريفية ببرامج الماجستير وشروط القبول" data-date="2026-12-12" data-time="4:00 مساءً - 6:00 مساءً" data-main-img="img/event/ev7-1.jpg" data-map-img="img/map/damascus-map.png"
+        data-gallery="img/event/7eg1.jpg,img/event/7eg2.jpg,img/event/7eg3.jpg"
+        data-full-desc="<p>للراغبين بإكمال دراساتهم العليا، تدعوكم الجامعة لحضور <strong>الندوة التعريفية ببرامج الماجستير</strong>.</p><p>سيتم شرح كافة التفاصيل المتعلقة بالتسجيل، الامتحانات المعيارية، ومسارات البحث.</p><p><strong>تتضمن الندوة:</strong></p><ul><li>شرح مفصل لاختبارات القبول واللغة.</li><li>فقرة أسئلة وأجوبة مع عمداء الكليات.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev7.jpg" class="card-img-top" alt="ندوة الماجستير">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-secondary mb-2 align-self-start">الندوات الأكاديمية</span>
+                    <h3 class="card-title h5">ندوة برامج الماجستير وشروط القبول</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-12 | 📍 دمشق</p>
+                    <p class="card-text flex-grow-1">جلسة إرشادية للخريجين الراغبين بمتابعة الدراسات العليا.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-8" data-category="academia" data-location="Hama" data-title="جلسة نقاش مفتوح مع الكادر التدريسي لبرنامج الحقوق" data-date="2026-12-15" data-time="12:00 ظهراً - 2:00 ظهراً" data-main-img="img/event/ev8-1.jpg" data-map-img="img/map/hama-map.png"
+        data-gallery="img/event/8eg1.jpg,img/event/8eg2.jpg,img/event/8eg3.jpg"
+        data-full-desc="<p>لقاء حصري ومباشر بين طلاب الحقوق و<strong>الكادر التدريسي والأكاديمي</strong> في مركز نفاذ حماة.</p><p>تأتي هذه الجلسة للوقوف على استفسارات الطلاب ومناقشة المقررات الحديثة.</p><p><strong>المحاور:</strong></p><ul><li>مناقشة آلية الامتحانات والأبحاث القانونية.</li><li>الاستماع لمقترحات الطلاب لتطوير البرنامج.</li></ul>"> 
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev8.jpg" class="card-img-top" alt="نقاش الحقوق">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-secondary mb-2 align-self-start">الندوات الأكاديمية</span>
+                    <h3 class="card-title h5">جلسة نقاش برنامج الحقوق</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-15 | 📍 حماة</p>
+                    <p class="card-text flex-grow-1">لقاء مباشر للتواصل الفعال بين الإدارة والطلاب.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-9" data-category="art" data-location="Aleppo" data-title="مسابقة القصة القصيرة والمقال الأدبي" data-date="2026-12-18" data-time="11:00 صباحاً - 1:00 ظهراً" data-main-img="img/event/ev9-1.jpg" data-map-img="img/map/aleppo-map.png"
+        data-gallery="img/event/9eg1.jpg,img/event/9eg2.jpg,img/event/9eg3.jpg"
+        data-full-desc="<p>ندعو المواهب الأدبية للمشاركة في <strong>مسابقة الإبداع الكتابي</strong>.</p><p>حيث سيتم تتويج أفضل الأعمال الأدبية المكتوبة بأقلام طلاب الجامعة الافتراضية.</p><p><strong>شروط المشاركة:</strong></p><ul><li>أن يكون النص من تأليف الطالب حصراً.</li><li>أن يعالج قضايا شبابية أو جامعية معاصرة.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev9.jpg" class="card-img-top" alt="مسابقة أدبية">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-danger mb-2 align-self-start">الثقافة والفنون</span>
+                    <h3 class="card-title h5">مسابقة القصة والمقال الأدبي</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-18 | 📍 حلب</p>
+                    <p class="card-text flex-grow-1">منصة لإبراز المواهب الأدبية والكتابية لدى الطلاب.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-10" data-category="art" data-location="Latakia" data-title="معرض التصوير الضوئي لإبداعات الطلاب" data-date="2026-12-20" data-time="4:00 مساءً - 8:00 مساءً" data-main-img="img/event/ev10-1.jpg" data-map-img="img/map/latakia-map.png"
+        data-gallery="img/event/10eg1.jpg,img/event/10eg2.jpg,img/event/10eg3.jpg"
+        data-full-desc="<p>افتتاح <strong>المعرض السنوي للتصوير الضوئي</strong> لطلاب الجامعة في اللاذقية.</p><p>يضم المعرض لقطات فنية تعكس عدسات الطلاب ورؤيتهم للطبيعة والحياة اليومية.</p><p><strong>الفعاليات المرافقة:</strong></p><ul><li>تكريم أفضل 3 صور بناءً على تصويت الزوار.</li><li>ورشة سريعة في أساسيات التصوير.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev10.jpg" class="card-img-top" alt="معرض تصوير">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-danger mb-2 align-self-start">الثقافة والفنون</span>
+                    <h3 class="card-title h5">معرض التصوير الضوئي</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-20 | 📍 اللاذقية</p>
+                    <p class="card-text flex-grow-1">معرض فني يبرز أعمال ومواهب الطلاب في فن التصوير.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-11" data-category="sports" data-location="Idlib" data-title="ماراثون الجامعة الافتراضية الرياضي" data-date="2026-12-25" data-time="8:00 صباحاً - 11:00 صباحاً" data-main-img="img/event/ev11-1.jpg" data-map-img="img/map/idlib-map.png"
+        data-gallery="img/event/11eg1.jpg,img/event/11eg2.jpg,img/event/11eg3.jpg"
+        data-full-desc="<p>انضموا إلينا في <strong>ماراثون الركض السنوي</strong> تحت شعار (رياضة من أجل الصحة).</p><p>يهدف الماراثون لتعزيز النمط الصحي بين الطلاب والكوادر العاملة.</p><p><strong>معلومات هامة:</strong></p><ul><li>مسار الماراثون يمتد لـ 5 كيلومترات.</li><li>توزيع ميداليات تذكارية لجميع الواصلين لخط النهاية.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev11.jpg" class="card-img-top" alt="ماراثون">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-success mb-2 align-self-start">الرياضة والصحة</span>
+                    <h3 class="card-title h5">ماراثون الجامعة الرياضي</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-25 | 📍 ادلب</p>
+                    <p class="card-text flex-grow-1">سباق ركض لتشجيع النشاط البدني والصحة العامة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-12" data-category="sports" data-location="Dar'a" data-title="بطولة كرة القدم الخماسية للفرق الطلابية" data-date="2026-12-30" data-time="2:00 ظهراً - 6:00 مساءً" data-main-img="img/event/ev12-1.jpg" data-map-img="img/map/dar'a-map.png"
+        data-gallery="img/event/12eg1.jpg,img/event/12eg2.jpg,img/event/12eg3.jpg"
+        data-full-desc="<p>الحماس والمنافسة في <strong>بطولة كرة القدم الخماسية</strong> لفرق طلاب محافظة درعا.</p><p>شكّل فريقك وانطلق نحو الكأس في بطولة تنشيطية مليئة بالمتعة.</p><p><strong>النظام:</strong></p><ul><li>خروج المغلوب من دور واحد.</li><li>كل فريق يتألف من 5 لاعبين أساسيين و2 احتياط.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev12.jpg" class="card-img-top" alt="كرة قدم">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-success mb-2 align-self-start">الرياضة والصحة</span>
+                    <h3 class="card-title h5">بطولة كرة القدم الخماسية</h3>
+                    <p class="text-muted small mb-2">📅 2026-12-30 | 📍 درعا</p>
+                    <p class="card-text flex-grow-1">دوري كرة قدم تنافسي مصغر للفرق الجامعية.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 event-card"
+        data-id="event-13" data-category="tech" data-location="Homs" data-title="ورشة عمل تطبيقية حول بناء تطبيقات الويب" data-date="2026-11-25" data-time="10:00 صباحاً - 2:00 ظهراً" data-main-img="img/event/ev13-1.jpg" data-map-img="img/map/homs-map.png"
+        data-gallery="img/event/13eg1.jpg,img/event/13eg2.jpg,img/event/13eg3.jpg"
+        data-full-desc="<p>تنظم الجامعة الافتراضية السورية <strong>ورشة عمل تطبيقية</strong> متقدمة في مجال بناء تطبيقات الويب.</p><p>ستركز الورشة على تدريب الطلاب عملياً على استخدام بيئات العمل الحديثة.</p><p><strong>أهداف الورشة:</strong></p><ul><li>التعرف على أحدث تقنيات الويب.</li><li>بناء تطبيق ويب متكامل خطوة بخطوة.</li></ul>">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="img/event/ev13.jpg" class="card-img-top" alt="ورشة ويب">
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-primary mb-2 align-self-start">التقنية والبرمجة</span>
+                    <h3 class="card-title h5">ورشة عمل تطبيقية حول بناء تطبيقات الويب</h3>
+                    <p class="text-muted small mb-2">📅 2026-11-25 | 📍 حمص</p>
+                    <p class="card-text flex-grow-1">ورشة عملية لتعلم بناء تطبيقات ويب حديثة.</p>
+                    <button class="btn btn-outline-primary mt-auto" onclick="goToEventDetails(this)">التفاصيل</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 دليل فعاليات الجامعة الافتراضية السورية SVU - جميع الحقوق محفوظة.</p>
+            <p>تواصل معنا: info@svuonline.org | تابعنا على: 
+                <a href="#">فيسبوك</a> - <a href="#">X</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
